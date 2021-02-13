@@ -11,7 +11,7 @@ pipeline {
         }
        stage('Install') { 
             steps {
-                     nodejs('Node-10.17'){
+                     nodejs('Node-15.8'){
                     bat 'yarn install' 
                 }
             }
@@ -20,13 +20,17 @@ pipeline {
       
         stage('Build') {
             steps {
+                     nodejs('Node-15.8'){
                 bat 'yarn run build'
+                }
             }
         }
     
         stage('Eject') {
             steps {
+                     nodejs('Node-15.8'){
                 bat 'yarn run eject'
+                }
             }
         }
     
@@ -34,7 +38,9 @@ pipeline {
     
        stage('Start') {
             steps {
+                      nodejs('Node-15.8'){
                 bat 'yarn start'
+                }
             }
         }
     }
