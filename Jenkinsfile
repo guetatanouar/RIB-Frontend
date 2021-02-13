@@ -6,12 +6,14 @@ pipeline {
       stages {
         stage('Install YARN') { 
             steps {
-                bat 'npm install -g yarn' 
+                    bat 'npm install -g yarn' 
             }
         }
        stage('Install') { 
             steps {
-                bat 'yarn' 
+                     nodejs('Node-10.17'){
+                    bat 'yarn install' 
+                }
             }
         }
     
