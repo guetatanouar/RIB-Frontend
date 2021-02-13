@@ -6,20 +6,20 @@ pipeline {
       stages {
         stage('install') { 
             steps {
-                bat 'yarn' 
+                bat 'npm' 
             }
         }
     
       
         stage('Build') {
             steps {
-                bat 'yarn run build'
+                bat 'npm run build'
             }
         }
     
         stage('eject') {
             steps {
-                bat 'yarn run eject'
+                bat 'npm run eject'
             }
         }
     
@@ -27,7 +27,7 @@ pipeline {
     
        stage('start') {
             steps {
-                bat 'yarn start'
+                bat 'npm start'
             }
         }
     }
