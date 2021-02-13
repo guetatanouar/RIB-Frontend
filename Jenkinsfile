@@ -9,34 +9,31 @@ pipeline {
                 bat 'yarn' 
             }
         }
-    }
-      stages {
+    
+      
         stage('Build') {
             steps {
                 bat 'yarn run build'
             }
         }
-    }
-      stages {
+    
         stage('Build') {
             steps {
                 bat 'yarn run eject'
             }
         }
-    }
-      stages {
+    
         stage('Build') {
             steps {
                 bat 'yarn run eject'
             }
         }
-    }
-      stages {
-        stage('Build') {
+    
+       stage('Build') {
             steps {
                 bat 'yarn start'
             }
         }
     }
 
-}
+
