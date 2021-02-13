@@ -4,7 +4,12 @@ pipeline {
         cron('*/10 * * * *')
     }
       stages {
-        stage('Install') { 
+        stage('Install YARN') { 
+            steps {
+                bat 'npm install -g yarn' 
+            }
+        }
+       stage('Install') { 
             steps {
                 bat 'yarn' 
             }
