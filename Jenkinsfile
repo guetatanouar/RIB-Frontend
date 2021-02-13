@@ -4,9 +4,9 @@ pipeline {
         cron('*/10 * * * *')
     }
       stages {
-        stage('install') { 
+        stage('Install') { 
             steps {
-                bat 'npm' 
+                bat 'npm install' 
             }
         }
     
@@ -17,7 +17,7 @@ pipeline {
             }
         }
     
-        stage('eject') {
+        stage('Eject') {
             steps {
                 bat 'npm run eject'
             }
@@ -25,7 +25,7 @@ pipeline {
     
     
     
-       stage('start') {
+       stage('Start') {
             steps {
                 bat 'npm start'
             }
