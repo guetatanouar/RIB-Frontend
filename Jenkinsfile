@@ -12,7 +12,7 @@ pipeline {
        stage('Install') { 
             steps {
                      nodejs('Node-15.8'){
-                    bat 'yarn install' 
+                   bat 'yarn install --network-timeout 100000' 
                 }
             }
         }
@@ -31,7 +31,7 @@ pipeline {
        stage('Start') {
             steps {
                       nodejs('Node-15.8'){
-                bat 'yarn start'
+                bat 'yarn start' 
                 }
             }
         }
