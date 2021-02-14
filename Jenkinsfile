@@ -26,15 +26,7 @@ pipeline {
             }
         }
     
-        stage('Eject') {
-            steps {
-                     nodejs('Node-15.8'){
-                bat 'yarn run eject'
-                }
-            }
-        }
-    
-    
+      
     
        stage('Start') {
             steps {
