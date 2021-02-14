@@ -1,7 +1,7 @@
 pipeline {
     agent any
     triggers {
-        cron('*/10 * * * *')
+        cron('0 * * * *')
     }
       stages {
         stage('Install YARN') { 
